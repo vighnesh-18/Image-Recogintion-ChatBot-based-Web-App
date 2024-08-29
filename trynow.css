@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: Poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #120c0c;
+}
+
+.container {
+    text-align: center;
+    background: grey;
+    padding: 40px;
+    width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+}
+
+h1 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+input[type="file"] {
+    display: block;
+    margin: 20px auto;
+    padding: 12px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    width: 80%;
+    max-width: 400px;
+}
+
+button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #004494;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    input[type="file"], button {
+        width: 100%;
+        max-width: none;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
