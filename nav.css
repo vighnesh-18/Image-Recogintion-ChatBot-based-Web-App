@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #000;
+    color: white;
+    margin: 0;
+    padding-top: 3rem; /* Space for the fixed navbar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Align content in a column */
+    height: 100vh;
+}
+
+nav {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    width: 50%; /* Navbar spans the full width of the page */
+    height: 3rem;
+    background-color: #222;
+    border-radius: 0 0 5px 5px; /* Rounded corners at the bottom */
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.link {
+    position: relative;
+}
+
+.link::after,
+.link::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: all 0.6s ease-in-out;
+}
+
+.link::after {
+    top: 0;
+    right: 0;
+    transform-origin: right;
+}
+
+.link::before {
+    left: 0;
+    bottom: 0;
+    transform-origin: left;
+}
+
+.link:hover::after,
+.link:hover::before {
+    width: 100%;
+}
